@@ -68,7 +68,6 @@ class ViewController: UIViewController {
         guard let rectValue = (infokey as AnyObject).cgRectValue else {return}
         let keyboardFrame = self.view.convert(rectValue, from: nil)
         self.constraint.constant = keyboardFrame.size.height + 250
-        self.constraint.constant = keyboardFrame.size.height + 500
     }
     @objc private func keyboardWillHide(_ notification: NSNotification) {
         self.constraint.constant = 170
